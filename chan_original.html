@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="KR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Carousel Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&family=Orbit&display=swap');
+
+        * {
+            font-family: 'Jua', sans-serif;
+
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* reset css */
+
+
+
+        .marketing {
+            text-align: center;
+        }
+
+        .my_title {
+            letter-spacing: -.05rem;
+            font-size: 50px;
+            color: var(--main, #34C88A);
+            font-family: Pretendard;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-top: 300px;
+            height: 625px;
+            margin-bottom: 30px;
+            background-color: skyblue;
+        }
+
+        #mybutton {
+            display: inline-flex;
+            padding: 20px 37px;
+            justify-content: center;
+            align-items: right;
+            gap: 10px;
+            border-radius: 52px;
+            border: 3px solid var(--main, #34C88A);
+            font-family: Pretendard;
+            background-color: #ffffff;
+            ;
+
+        }
+
+        .my_name {
+            color: var(--index, #9A9A9A);
+            font-family: Pretendard;
+            font-size: 96px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            background-color: yellow;
+        }
+
+        #my_image {
+            width: 485px;
+            height: 628px;
+            border-radius: 44px;
+            background: linear-gradient(0deg, rgba(52, 200, 138, 0.20) 0%, rgba(52, 200, 138, 0.20) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        }
+        .row{
+            background-color: purple;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container marketing">
+
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="my_title">"미래의 떳떳한 개발자가 될" <p class="my_name">김희찬이에요</p><button id="mybutton">
+                        프로필 자세히 보기
+                    </button>
+                </h2>
+
+            </div>
+            <div class="col-md-5" id="my_content">
+                <img src="images/image_1.png" id="my_image">
+
+
+            </div>
+        </div>
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="my_title">"미래의 떳떳한 개발자가 될" <p class="my_name">김희찬이에요</p><button id="mybutton">
+                        프로필 자세히 보기
+                    </button>
+                </h2>
+
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="images/image_2.png" id="my_image" class="d-block w-100" alt="...">
+
+            </div>
+        </div>
+        <div class="row featurette">
+            <div class="col-md-7" id="my_content">
+                <h2 class="my_title"> "미래의 떳떳한 개발자가 될" <p class="my_name">김희찬이에요</p><button id="mybutton">
+                        프로필 자세히 보기
+                    </button>
+
+            </div>
+            <div class="col-md-5">
+                <img src="images/image_3.png" id="my_image">
+
+            </div>
+        </div>
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2" id="my_content">
+                <h2 class="my_title"> "미래의 떳떳한 개발자가 될" <p class="my_name">김희찬이에요</p><button id="mybutton">
+                        프로필 자세히 보기
+                    </button>
+
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="images/image_4.png" id="my_image">
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
