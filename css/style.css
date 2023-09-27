@@ -583,7 +583,7 @@ margin-bottom:48px;
 /*푸터*/
 footer {
   margin-top: 340px;
-  width: 1920px;
+  width: 100%;
   height: 464px;
   background-color: #34C88A;
   display: flex;
