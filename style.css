@@ -578,3 +578,27 @@ line-height: normal;
     display: flex;
 
 }
+
+/*푸터*/
+footer {
+  margin-top: 340px;
+  width: 1920px;
+  height: 464px;
+  background-color: #34C88A;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer>span {
+  /* position: relative;
+  inset: 159px 554px 152px 554px; */
+  color: #FFF;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
