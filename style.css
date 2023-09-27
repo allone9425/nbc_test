@@ -98,7 +98,7 @@ a{color:inherit; text-decoration: none;}
 }
 
 #team_info{
-  background-color: purple;
+ 
   text-align: center;
   margin: 372px 0;
 }
@@ -269,7 +269,7 @@ width: 250vw;
     /*margin-top: 300px;*/
     /*height: 625px;*/
     /*margin-bottom: 30px;*/
-    background-color: skyblue;
+    
 }
 
 #team_member .mybutton {
@@ -297,7 +297,7 @@ width: 250vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    background-color: yellow;
+
 }
 
 #team_member .my_image {
@@ -312,7 +312,7 @@ width: 250vw;
 
 #team_member .row {
     margin-bottom: 300px;
-    background-color: purple;
+
 }
 
 #team_member .team_member_box_right {
@@ -330,4 +330,125 @@ width: 250vw;
 #team_member .mybutton:hover {
     background-color: #34C88A;
     color: #fff;
+}
+
+
+/*영호님 코딩 부분*/
+#team_promiss p.youngho{
+  font-size: 128px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  color: #9A9A9A;
+  font-weight: bold;
+}
+
+#team_promiss div.youngho {
+  font-size: 128px;
+  text-align: center;
+  margin-bottom: 0px;
+  color: #9A9A9A;
+  font-weight: bold;
+}
+
+#team_promiss #num {
+  color: #34C88A;
+  font-size: 300px;
+  vertical-align: -0.15em;
+  margin: 0px 15px;
+}
+
+#team_promiss h2{
+  font-size: 128px;
+    text-align: center;
+    margin-bottom: 46px;
+    color: #9A9A9A;
+    font-weight: bold;
+}
+
+#team_promiss #distance {
+  margin-top: 0px;
+  margin-bottom: 200px;
+}
+ /* .youngho{
+  margin : 0 323px;
+} */
+
+#team_promiss h2 span {
+  color: #34C88A;
+}
+
+#team_promiss #promiss {
+  background-color: #34C88A;
+  color: #FFFFFF;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin-bottom: 0px;
+  font-size: 96px;
+  line-height: 144px;
+}
+
+#team_promiss .team {
+  margin: 0px 15px;
+}
+
+#team_promiss .left-width {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  left: 30.87px;
+ /* top: 720.43px;*/
+
+  background: #FFFFFF;
+  border-radius: 50px;
+  transform: rotate(90deg);
+}
+
+#team_promiss .left-length {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  left: 5px;
+  top: 29px;
+
+  background: #FFFFFF;
+  border-radius: 50px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+#team_promiss .promiss-area {
+  width: 100%;
+ /* height: 850px;*/
+  position: relative;
+}
+
+#team_promiss .right-width {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  right: 30.87px;
+  /*top: 1056.43px;*/
+  bottom: 0;
+
+  background: #FFFFFF;
+  border-radius: 50px;
+  transform: rotate(90deg);
+}
+
+#team_promiss .right-length {
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  right: 5px;
+  /*top: 1029.87px;*/
+  bottom:25px;
+
+  background: #FFFFFF;
+  border-radius: 50px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+
+#team_promiss .team_promiss_txt{
+  margin: 375px 0;
 }
