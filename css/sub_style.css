@@ -24,7 +24,7 @@ a {
 body {
     height: 1080px;
     width: 1920px;
-    background-image: url('../image/backobj.png');
+    background-image: url('../images/backobj.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -44,7 +44,7 @@ body {
 
 .tag {
     margin-top: 97px;
-    width: 650px;
+    width: 800px;
 }
 
 .tag>div {
@@ -70,14 +70,14 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-
+    text-align: left;
     margin-top: 24px;
-    width: 664px;
+    width: 800px;
 }
 
 .rightContent {
     display: block;
-    margin-left: 125px;
+    /* margin-left: 125px; */
 }
 
 .myimage {
@@ -108,7 +108,7 @@ h1 {
     color: #9A9A9A;
     text-align: center;
     font-family: Pretendard;
-    font-size: 96px;
+    font-size: 90px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -155,7 +155,7 @@ span {
     color: #34C88A;
     text-align: center;
     font-family: Pretendard;
-    font-size: 150px;
+    font-size: 130px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -195,55 +195,62 @@ footer>span {
     line-height: normal;
 }
 
-#my_point{
+#my_point {
     text-align: center;
     margin: 372px 0;
     font-weight: 700;
 
-  }
-  #my_point h2{
-    color:#9a9a9a;
+}
+
+#my_point h2 {
+    color: #9a9a9a;
     font-size: 6rem;
     font-weight: 700;
-  }
-  #my_point h2 span{
-    color:#34c88a;
-  }
-  #my_point .point_txt{
-    font-size:2.5rem;
+}
+
+#my_point h2 span {
+    color: #34c88a;
+}
+
+#my_point .point_txt {
+    font-size: 2.5rem;
     color: #9a9a9a;
     line-height: 47px;
     font-weight: 500;
-  }
-  #my_point .point_big_box{
+}
+
+#my_point .point_big_box {
     overflow: hidden;
     margin: 50px 0;
-  }
-  #my_point .point_box{
-  display: flex;
-  flex-wrap: wrap;
-  width: 250vw;
-  }
-  #my_point .point_box p{
-    font-size:74px;
+}
+
+#my_point .point_box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 250vw;
+}
+
+#my_point .point_box p {
+    font-size: 74px;
     background-color: #34c88a;
-    color:#fff;
+    color: #fff;
     border-radius: 78px;
     padding: 32px 53px;
-    margin: 20px 30px; 
-  }
-  #my_point .point_box .box_gray{
+    margin: 20px 30px;
+}
+
+#my_point .point_box .box_gray {
     background-color: #eee;
-  }
-  
-  #my_point .point_box p:first-child{
+}
+
+#my_point .point_box p:first-child {
     border-top-left-radius: 0;
-    border-bottom-left-radius:0;
-    margin-left:0
-  }
-  #my_point .point_box p:last-child{
+    border-bottom-left-radius: 0;
+    margin-left: 0
+}
+
+#my_point .point_box p:last-child {
     border-top-right-radius: 0;
-    border-bottom-right-radius:0;
-    margin-right:0;
-  }
-  
+    border-bottom-right-radius: 0;
+    margin-right: 0;
+}
