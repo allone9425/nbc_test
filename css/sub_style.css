@@ -10,6 +10,7 @@ ol {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 /* reset css */
@@ -21,30 +22,61 @@ a {
     font-style: normal;
 }
 
-body {
-    height: 1080px;
-    width: 1920px;
-    background-image: url('../images/backobj.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 
-.nextdirection {
+/* .nextdirection {
+    position: relative;
+    top: 55px;
+    left: 55px;
     width: 87px;
     height: 87px;
-    margin: 55px 0 0 55px;
-}
+} */
+
+/* .updirection {
+    position: absolute;
+    bottom: 55px;
+    right: 55px;
+} */
 
 .oneContent {
     display: flex;
-    margin: 247px 323px 0 323px;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    /* margin: 247px 323px 0 323px; */
+    background: url(../images/backobj.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 230px 0;
+
+}
+
+.twoContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    /* margin: 247px 323px 0 323px; */
+}
+
+#my_point {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    /* margin: 247px 323px 0 323px; */
+}
+
+.fourContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    /* margin: 247px 323px 0 323px; */
 }
 
 
 .tag {
     margin-top: 97px;
-    width: 800px;
 }
 
 .tag>div {
@@ -63,6 +95,10 @@ body {
     margin-right: 16px;
 }
 
+.leftContent {
+    margin-right: 125px;
+}
+
 .leftContent>h1 {
     color: var(--main, #34C88A);
     font-family: Pretendard;
@@ -72,7 +108,6 @@ body {
     line-height: normal;
     text-align: left;
     margin-top: 24px;
-    width: 800px;
 }
 
 .rightContent {
@@ -101,7 +136,9 @@ body {
 }
 
 .line {
+    margin: 413px auto 0 auto;
     border: 1px solid #c1c1c1;
+    width: 1596px;
 }
 
 h1 {
@@ -112,7 +149,6 @@ h1 {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-top: 302px;
 }
 
 span {
@@ -172,9 +208,9 @@ span {
     line-height: 60px;
 }
 
-footer {
+.last {
     margin-top: 340px;
-    width: 1920px;
+    width: 100vw;
     height: 464px;
     background-color: #34C88A;
     display: flex;
@@ -183,7 +219,7 @@ footer {
     align-items: center;
 }
 
-footer>span {
+.last>span {
     /* position: relative;
     inset: 159px 554px 152px 554px; */
     color: #FFF;
@@ -197,7 +233,7 @@ footer>span {
 
 #my_point {
     text-align: center;
-    margin: 372px 0;
+    margin-top: 372px;
     font-weight: 700;
 
 }
@@ -215,7 +251,7 @@ footer>span {
 #my_point .point_txt {
     font-size: 2.5rem;
     color: #9a9a9a;
-    line-height: 47px;
+    line-height: 65px;
     font-weight: 500;
 }
 
@@ -226,8 +262,11 @@ footer>span {
 
 #my_point .point_box {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
     flex-wrap: wrap;
-    width: 250vw;
+    width: 100vw;
 }
 
 #my_point .point_box p {
@@ -244,13 +283,23 @@ footer>span {
 }
 
 #my_point .point_box p:first-child {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
     margin-left: 0
 }
 
 #my_point .point_box p:last-child {
-  /*  border-top-right-radius: 0;
+    /*  border-top-right-radius: 0;
     border-bottom-right-radius: 0;*/
     margin-right: 0;
+}
+
+.nextdirection{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.updirection{
+    right: 30px;
+    bottom: 30px;
+    position: fixed;
 }

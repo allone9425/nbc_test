@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=1920">
   <title>새싹의 반란</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -16,11 +17,11 @@
   <div id="wrap">
     <header id="header" class="d-flex justify-content-center py-3 bg-success" style="display: none !important;">
       <ul class="nav nav-pills">
-        <li class="nav-item "><a href="#" class="nav-link text-white" aria-current="page">홈으로</a></li>
-        <li class="nav-item"><a href="#" class="nav-link text-white">김희찬</a></li>
-        <li class="nav-item"><a href="#" class="nav-link text-white">여인준</a></li>
-        <li class="nav-item"><a href="#" class="nav-link text-white">이다원</a></li>
-        <li class="nav-item"><a href="#" class="nav-link text-white">진영호</a></li>
+        <li class="nav-item "><a href="index.html" class="nav-link text-white" aria-current="page">홈으로</a></li>
+        <li class="nav-item"><a href="sub_heechan.html" class="nav-link text-white">김희찬</a></li>
+        <li class="nav-item"><a href="sub_injun.html" class="nav-link text-white">여인준</a></li>
+        <li class="nav-item"><a href="sub_dawon.html" class="nav-link text-white">이다원</a></li>
+        <li class="nav-item"><a href="sub_youngho.html" class="nav-link text-white">진영호</a></li>
       </ul>
     </header>
     <section id="main">
@@ -58,7 +59,7 @@
             <div class="left-length"></div>
             <div class="right-width"></div>
             <div class="right-length"></div>
-            <p id="promiss">지각하지 않기 <br>
+            <p id="promiss">지각하지 않기<br>
               해야하는일은 꼭 해결하기 <br>
               포기하지 말고 팀원에게 SOS</p>
           </div>
@@ -86,7 +87,7 @@
             <div class="team_member_box">
               <h2 class="my_title">"미래의 떳떳한 개발자가 될"</h2>
               <p class="my_name">김희찬이에요</p>
-              <button class="mybutton">프로필 자세히 보기</button>
+              <button class="mybutton"><a href="sub_heechan.html">프로필 자세히 보기</a></button>
             </div>
           </div>
           <div class="col-md-5 order-md-1">
@@ -112,7 +113,7 @@
             <div class="team_member_box">
               <h2 class="my_title">"미래의 떳떳한 개발자가 될"</h2>
               <p class="my_name">이다원이에요</p>
-              <button class="mybutton">프로필 자세히 보기</button>
+              <button class="mybutton"><a href="sub_dawon.html">프로필 자세히 보기</a></button>
             </div>
           </div>
           <div class="col-md-5 order-md-1">
@@ -126,7 +127,7 @@
             <div class="team_member_box_right">
               <h2 class="my_title">"미래의 떳떳한 개발자가 될"</h2>
               <p class="my_name">진영호이에요</p>
-              <button class="mybutton">프로필 자세히 보기</button>
+              <button class="mybutton"><a href="sub_youngho.html">프로필 자세히 보기</a></button>
             </div>
 
           </div>
@@ -144,134 +145,112 @@
       <div class="team_cheer_box">
         <div class="mypostingbox" id="postingbox">
           <div class="form-floating mb-3">
-            <input type="email" class="formControl" id="image" placeholder="응원의 한 마디">
+            <input type="email" class="formControl" id="comment" placeholder="응원의 한 마디">
             <label for="floatingInput"></label>
           </div>
           <button id="postingbtn" type="button">기록하기</button>
         </div>
 
+
+
+        <div class="mycards">
+          <div id="card" class="row row-cols-1 row-cols-md-3 g-4 ">
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <img src="images/Wheart.png">
+      <span>새싹의 반란</span>
+    </footer>
+
+
+    <div class="updirection btn_top" id="btn_top">
+      <img src="images/updirection.png">
+  </div>
+
+
+  <script>
+
+//위로가기 버튼 클릭하면 위로 올라가게 하기 
+    $('.btn_top').click(function(){
+            event.preventDefault();
     
+            $("html,body").stop().animate({scrollTop:0});
+            });
 
-      <div class="mycards">
-        <div id="card" class="row row-cols-1 row-cols-md-3 g-4 ">
-          <div class="col">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">영화 제목</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">영화 제목</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">영화 제목</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">영화 제목</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">영화 제목</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목영화 제목</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">영화 제목</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+// 위로 특정 부분에서 보이게 하고 특정부분에서 보이지 않게 하기 
+            $(window).scroll(function(){ 
+        if ($(document).scrollTop() >= 1134 && $(document).scrollTop() <= 20000){  
+          $('#btn_top').fadeIn(); 
+        }
+        else {
+          $('#btn_top').fadeOut();
+        } 
+      })//window scroll
+  
 
-  </div>
-    </section>
+        </script>
 
-    <!--
-    <section id="my_point">
-      <h2>저의 <span>‘장점’</span> 이에요</h2>
-      <div class="point_big_box">
-        <div class="point_box">
-          <p class="box_gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-          <p>씩씩한!</p>
-          <p>꼼꼼함!</p>
-          <p>눈치가 빨라요!</p>
-          <p class="box_gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-        </div>
-        <div class="point_box">
-          <p class="box_gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-          <p>집중력!</p>
-          <p>낭만가득!</p>
-          <p>돈계산을 잘해요!</p>
-          <p class="box_gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
-        </div>
-      </div>
-      <p class="point_txt">뭐 저의 장점은 이렇게 돼서 이러한 삶을 살아가고 있다가 코딩에 눈을 떠서 캠프를</p>
-      <p class="point_txt">시작하고 이러한 장점이 캠프에 도움이 되고 좋은 개발자가 되고 싶어요</p>
-    </section>
-    <!--
-    <section id="my_point2">
-      <h2>저의 <span>‘장점’</span> 이에요</h2>
-      <div class="point_big_box">
-        <div class="point_box">
-          <p class="box_gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-          <p>씩씩한!</p>
-          <p>꼼꼼함!</p>
-          <p>눈치가 빨라요!</p>
-          <p class="box_gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<script type="module">
+  // Firebase SDK 라이브러리 가져오기
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+  import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+  import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
-          </div>
-          <div class="point_box">
-          <p class="box_gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-          <p>집중력!</p>
-          <p>낭만가득!</p>
-          <p>돈계산을 잘해요!</p>
-          <p class="box_gray">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
-        </div> 
-      </div>
-      <p class="point_txt">뭐 저의 장점은 이렇게 돼서 이러한 삶을 살아가고 있다가 코딩에 눈을 떠서 캠프를</p>
-      <p class="point_txt">시작하고 이러한 장점이 캠프에 도움이 되고 좋은 개발자가 되고 싶어요</p>
-    </section>
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+      apiKey: "AIzaSyB7t1qKHUjDWbnN3vs8oDIalQyZpWkxQPs",
+      authDomain: "sparta-4434f.firebaseapp.com",
+      projectId: "sparta-4434f",
+      storageBucket: "sparta-4434f.appspot.com",
+      messagingSenderId: "729932088012",
+      appId: "1:729932088012:web:6a89d4fcbdc7aa6e47f869",
+      measurementId: "G-EZ3P5NVH4M"
 
-  </div>
--->
+  };
 
-<footer>
-  <img src="images/Wheart.png">
-  <span>새싹의 반란</span>
-</footer>
+  // Firebase 인스턴스 초기화
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
 
+  $("#postingbtn").click(async function () {
+      let comment = $("#comment").val();
+
+      let doc = {
+          'comment': comment
+
+      };
+      await addDoc(collection(db, "comment"), doc);
+      alert('저장 완료!');
+      window.location.reload();
+  })
+
+
+  let docs = await getDocs(collection(db, "comment"));
+  docs.forEach((doc) => {
+      let row = doc.data();
+
+      let comment = row['comment']
+
+      let temp_html = `<div class="col">
+                  <div class="card h-100">
+                      <div class="card-body">
+                          <h5 class="card-title">${comment}</h5>
+                      </div>
+                  </div>
+              </div>`
+
+      $('#card').append(temp_html);
+
+  })
+</script>
 </body>
 
 </html>
