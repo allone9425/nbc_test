@@ -174,7 +174,8 @@
 
 
   <script>
-
+window.addEventListener('scroll',function(){
+  console.log(window.scrollY) })
 //위로가기 버튼 클릭하면 위로 올라가게 하기 
     $('.btn_top').click(function(){
             event.preventDefault();
@@ -184,7 +185,7 @@
 
 // 위로 특정 부분에서 보이게 하고 특정부분에서 보이지 않게 하기 
             $(window).scroll(function(){ 
-        if ($(document).scrollTop() >= 1134 && $(document).scrollTop() <= 20000){  
+        if ($(document).scrollTop() >= 1134 && $(document).scrollTop() <= 11634){  
           $('#btn_top').fadeIn(); 
         }
         else {
@@ -193,6 +194,7 @@
       })//window scroll
   
 
+    
         </script>
 
 
