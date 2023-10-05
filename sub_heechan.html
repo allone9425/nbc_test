@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="css/sub_style.css">
     <title>새싹의 반란</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="nextdirection">
         <a href="index.html"><img src="images/nextbutton.png"></a>
     </div>
-   <div class="updirection btn_top">
+    <div style="cursor:pointer" class="updirection btn_top" id="btn_top">
         <img src="images/updirection.png">
-    </div> 
+    </div>
     <div class="oneContent">
         <div class="leftContent">
             <img class="firstheart" src="images/heart.png" alt="profile">
@@ -44,7 +44,10 @@
         <h1>저의 <span>'MBTI'</span> 이에요</h1>
         <div class="mbtiContent">
             <span>ISTJ</span>
-            <div><p>운동하는 것을 좋아하고 영화보기,</p><p>크로스핏을 좋아합니다.</p></div>
+            <div>
+                <p>운동하는 것을 좋아하고 영화보기,</p>
+                <p>크로스핏을 좋아합니다.</p>
+            </div>
         </div>
     </div>
 
@@ -74,10 +77,14 @@
 
     <div class="fourContent">
         <h1>저는 이렇게 <span>'협업'</span> 하고 싶어요</h1>
-        <div><p>무인도에 떨어진</p> <p>'1조'</p></div>
-        <div class="index"><p>서로 믿고 의지하며, 끝까지 버텨낼 수 있게 가요 !!</p>
-                <p>모르는 부분은 서로 채워주고, 맞춰나아가 원하는 결과를 이루자</p>
-                <p>React 3기 함께 친해져욧!!</p>
+        <div>
+            <p>무인도에 떨어진</p>
+            <p>'1조'</p>
+        </div>
+        <div class="index">
+            <p>서로 믿고 의지하며, 끝까지 버텨낼 수 있게 가요 !!</p>
+            <p>모르는 부분은 서로 채워주고, 맞춰나아가 원하는 결과를 이루자</p>
+            <p>React 3기 함께 친해져욧!!</p>
         </div>
     </div>
     <div class="last">
@@ -86,12 +93,22 @@
     </div>
 
     <script>
-$('.btn_top').click(function(){
-		event.preventDefault();
+        //위로가기 버튼 클릭하면 위로 올라가게 하기 
+        $('.btn_top').click(function () {
+            event.preventDefault();
 
-		$("html,body").stop().animate({scrollTop:0});
-		});
+            $("html,body").stop().animate({ scrollTop: 0 });
+        });
 
+        // 위로 특정 부분에서 보이게 하고 특정부분에서 보이지 않게 하기 
+        $(window).scroll(function () {
+            if ($(document).scrollTop() >= 1080 && $(document).scrollTop() <= 20000) {
+                $('#btn_top').fadeIn();
+            }
+            else {
+                $('#btn_top').fadeOut();
+            }
+        })//window scroll
     </script>
 </body>
 

@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="css/sub_style.css">
     <title>새싹의 반란</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
 </head>
 
 <body>
     <div class="nextdirection">
         <a href="index.html"><img src="images/nextbutton.png"></a>
     </div>
-     <div class="updirection btn_top">
+    <div style="cursor:pointer" class="updirection btn_top" id="btn_top">
         <img src="images/updirection.png">
-    </div> 
+    </div>
     <div class="oneContent">
         <div class="leftContent">
             <img class="firstheart" src="images/heart.png" alt="profile">
@@ -43,7 +44,11 @@
         <h1>저의 <span>'MBTI'</span> 이에요</h1>
         <div class="mbtiContent">
             <span>INFP</span>
-            <div><p>호기심이 많고 공감을 잘해요</p><p>불타는 열정과 창의적이에요</p><p>상상력이 뛰어나요</p></div>
+            <div>
+                <p>호기심이 많고 공감을 잘해요</p>
+                <p>불타는 열정과 창의적이에요</p>
+                <p>상상력이 뛰어나요</p>
+            </div>
         </div>
     </div>
 
@@ -78,7 +83,8 @@
             <p>함께 의논하는</p>
             <p>'소통전문가'</p>
         </div>
-        <div class="index"><p>함께 최선의 결과를 내도록 소통하는 것이 중요하다고 생각해요.</p>
+        <div class="index">
+            <p>함께 최선의 결과를 내도록 소통하는 것이 중요하다고 생각해요.</p>
         </div>
     </div>
     <div class="last">
@@ -86,13 +92,23 @@
         <span>새싹의 반란</span>
     </div>
     <script>
-        $('.btn_top').click(function(){
-                event.preventDefault();
-        
-                $("html,body").stop().animate({scrollTop:0});
-                });
-        
-            </script>
+        //위로가기 버튼 클릭하면 위로 올라가게 하기 
+        $('.btn_top').click(function () {
+            event.preventDefault();
+
+            $("html,body").stop().animate({ scrollTop: 0 });
+        });
+
+        // 위로 특정 부분에서 보이게 하고 특정부분에서 보이지 않게 하기 
+        $(window).scroll(function () {
+            if ($(document).scrollTop() >= 1080 && $(document).scrollTop() <= 20000) {
+                $('#btn_top').fadeIn();
+            }
+            else {
+                $('#btn_top').fadeOut();
+            }
+        })//window scroll
+    </script>
 </body>
 
 </html>

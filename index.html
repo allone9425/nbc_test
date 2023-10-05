@@ -145,6 +145,10 @@
       <div class="team_cheer_box">
         <div class="mypostingbox" id="postingbox">
           <div class="form-floating mb-3">
+            <input type="email" class="formControl" id="nickname" placeholder="닉네임" maxlength='8'>
+            <label for="floatingInput"></label>
+          </div>
+          <div class="form-floating mb-3">
             <input type="email" class="formControl" id="comment" placeholder="응원의 한 마디">
             <label for="floatingInput"></label>
           </div>
@@ -169,88 +173,117 @@
 
 
     <div class="updirection btn_top" id="btn_top">
-      <img src="images/updirection.png">
-  </div>
+      <img src="images/updirection.png" id="btn_image">
+    </div>
+
+    <div class="updirection2 btn_top2" id="btn_top2">
+      <img src="images/updirection_white.png">
+    </div>
 
 
-  <script>
+    <script>
+      //위로가기 버튼 클릭하면 위로 올라가게 하기 
+      $('.btn_top').click(function () {
+        event.preventDefault();
+        $("html,body").stop().animate({ scrollTop: 0 });
+      });
 
-//위로가기 버튼 클릭하면 위로 올라가게 하기 
-    $('.btn_top').click(function(){
-            event.preventDefault();
-    
-            $("html,body").stop().animate({scrollTop:0});
-            });
 
-// 위로 특정 부분에서 보이게 하고 특정부분에서 보이지 않게 하기 
-            $(window).scroll(function(){ 
-        if ($(document).scrollTop() >= 1134 && $(document).scrollTop() <= 20000){  
-          $('#btn_top').fadeIn(); 
+      $('.btn_top2').click(function () {
+        event.preventDefault();
+        $("html,body").stop().animate({ scrollTop: 0 });
+      });
+
+      // 위로 특정 부분에서 보이게 하고 특정부분에서 보이지 않게 하기 
+      $(window).scroll(function () {
+        if ($(document).scrollTop() >= 1134 && $(document).scrollTop() <= 20000) {
+          $('#btn_top').fadeIn();
         }
         else {
           $('#btn_top').fadeOut();
-        } 
+        }
       })//window scroll
-  
+      function 현재스크롤() {
+        window.addEventListener('scroll', function () {
+          console.log(window.scrollY)
+        })
+      }
 
-        </script>
+      $(window).scroll(function () { 
+        var scrollAll = document.querySelector('html').scrollTop;
+        var clientAll =  document.querySelector('html').clientHeight
+        var scrollH = document.querySelector('html').scrollHeight
+        
+        if (scrollAll + clientAll  >= scrollH - 464) {
+          $('#btn_top2').fadeIn();
+        }
+        else {
+          $('#btn_top2').fadeOut();
+        }
+        
+
+      })
+
+    </script>
 
 
-<script type="module">
-  // Firebase SDK 라이브러리 가져오기
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-  import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-  import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-  import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+    <script type="module">
+      // Firebase SDK 라이브러리 가져오기
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+      import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+      import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
 
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-      apiKey: "AIzaSyB7t1qKHUjDWbnN3vs8oDIalQyZpWkxQPs",
-      authDomain: "sparta-4434f.firebaseapp.com",
-      projectId: "sparta-4434f",
-      storageBucket: "sparta-4434f.appspot.com",
-      messagingSenderId: "729932088012",
-      appId: "1:729932088012:web:6a89d4fcbdc7aa6e47f869",
-      measurementId: "G-EZ3P5NVH4M"
-
-  };
-
-  // Firebase 인스턴스 초기화
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  $("#postingbtn").click(async function () {
-      let comment = $("#comment").val();
-
-      let doc = {
-          'comment': comment
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyB7t1qKHUjDWbnN3vs8oDIalQyZpWkxQPs",
+        authDomain: "sparta-4434f.firebaseapp.com",
+        projectId: "sparta-4434f",
+        storageBucket: "sparta-4434f.appspot.com",
+        messagingSenderId: "729932088012",
+        appId: "1:729932088012:web:6a89d4fcbdc7aa6e47f869",
+        measurementId: "G-EZ3P5NVH4M"
 
       };
-      await addDoc(collection(db, "comment"), doc);
-      alert('저장 완료!');
-      window.location.reload();
-  })
+
+      // Firebase 인스턴스 초기화
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      $("#postingbtn").click(async function () {
+        let nickname = $("#nickname").val();
+        let comment = $("#comment").val();
+
+        let doc = {
+          'nickname': nickname,
+          'comment': comment
+
+        };
+        await addDoc(collection(db, "fighting"), doc);
+        alert('저장 완료!');
+        window.location.reload();
+      })
 
 
-  let docs = await getDocs(collection(db, "comment"));
-  docs.forEach((doc) => {
-      let row = doc.data();
+      let docs = await getDocs(collection(db, "fighting"));
+      docs.forEach((doc) => {
+        let row = doc.data();
+        let nickname = row['nickname']
+        let comment = row['comment']
 
-      let comment = row['comment']
+        let temp_html = `<div class="col">
+              <div class="card-body">
+                <h5 class="card-title">${nickname}</h5>
+                <p class="card-text">${comment}</p>
+              </div>
+            </div>`
 
-      let temp_html = `<div class="col">
-                  <div class="card h-100">
-                      <div class="card-body">
-                          <h5 class="card-title">${comment}</h5>
-                      </div>
-                  </div>
-              </div>`
 
-      $('#card').append(temp_html);
+        $('#card').append(temp_html);
 
-  })
-</script>
+      })
+    </script>
 </body>
 
 </html>

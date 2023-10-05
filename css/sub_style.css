@@ -292,14 +292,15 @@ span {
     margin-right: 0;
 }
 
-.nextdirection{
+.nextdirection {
     position: absolute;
     top: 30px;
     left: 30px;
 }
 
-.updirection{
+.updirection {
     right: 30px;
     bottom: 30px;
     position: fixed;
+    display: none;
 }
